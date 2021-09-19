@@ -1,8 +1,8 @@
 import falcon
 
-from .cities import City
+from .cities_controller import CityController
 
 app = application = falcon.App()
 
-cities = City()
+cities = CityController()
 app.add_route('/cities', cities)

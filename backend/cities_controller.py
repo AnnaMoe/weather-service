@@ -1,17 +1,14 @@
 
 import json
 import falcon
-import requests
+from .cities_service import CityService
 
-class City:
+class CityController:
 
     def on_get(self, req, resp):
-        response = requests.get(
-            "https://api.openweathermap.org/data/2.5/weather?q=Berlin&appid=33723607922dc4022ad15bf945b658cb")
+        service = CityService()
 
-        city = response.json()
-
-        doc = [ city ]
+        doc = service.get_all()
 
         # Create a JSON representation of the resource
         resp.text = json.dumps(doc, ensure_ascii=False)
