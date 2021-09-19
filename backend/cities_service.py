@@ -13,3 +13,5 @@ class CityService:
         data.append(response.json())
 
       return data
+    def create(self, new_city):
+      CityService.cities.append(new_city)

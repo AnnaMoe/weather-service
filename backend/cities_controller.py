@@ -17,3 +17,11 @@ class CityController:
         # status returned by the framework, but it is included here to
         # illustrate how this may be overridden as needed.
         resp.status = falcon.HTTP_200
+
+    def on_post(self, req, resp):
+        service = CityService()
+
+        # https://falcon.readthedocs.io/en/stable/api/request_and_response_wsgi.html#id1
+        service.create(req.media['city'])
+
+        resp.status = falcon.HTTP_201
