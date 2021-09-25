@@ -14,6 +14,16 @@ export class AppComponent {
     this.cityService.getCities().subscribe((cities) => (this.cities = cities));
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) {
+      return;
+    }
+    this.cityService.addCity({ name } as City).subscribe(() => {
+      this.getCities();
+    });
+  }
+
   ngOnInit() {
     this.getCities();
   }

@@ -351,11 +351,13 @@
   </div>
 
   <div class="add-city">
-    <form action="">
-      <label>Add city</label>
-      <input name="city" />
-      <button type="submit">Save</button>
-    </form>
+    <label for="new-city">City name: </label>
+    <input id="new-city" #cityName />
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add-button" (click)="add(cityName.value); cityName.value=''">
+      Add City
+    </button>
   </div>
 
   <table>

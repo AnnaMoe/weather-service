@@ -22,6 +22,6 @@ class CityController:
         service = CityService()
 
         # https://falcon.readthedocs.io/en/stable/api/request_and_response_wsgi.html#id1
-        service.create(req.media['city'])
+        service.create(req.media['name'])
 
         resp.status = falcon.HTTP_201
