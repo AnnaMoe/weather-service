@@ -12,7 +12,7 @@ class CityService:
       for city in CityService.cities:
         response = requests.get(
           # string interpolation with f-prefix
-            f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=33723607922dc4022ad15bf945b658cb")
+            f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid=33723607922dc4022ad15bf945b658cb")
 
         data.append(response.json())
 
