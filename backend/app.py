@@ -1,8 +1,9 @@
-import falcon
+# falcon is the framework equivalent to rails
+import falcon 
 
 from .cities_controller import CityController
 
 app = application = falcon.App()
 
-cities = CityController()
-app.add_route('/cities', cities)
+# configure the routes
+app.add_route('/cities', CityController())
