@@ -363,9 +363,9 @@
       <td>City</td>
       <td>Temperature</td>
     </thead>
-    <tr>
-      <td>Berlin</td>
-      <td>-10</td>
+    <tr *ngFor="let city of cities">
+      <td>{{ city.name }}</td>
+      <td>{{ city.temperature }}</td>
     </tr>
   </table>
 
