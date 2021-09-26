@@ -10,5 +10,6 @@ interface Main {
 export interface City {
   id: number;
   name: string;
+  // structure of the api - temp is value of main
   main: Main;
 }

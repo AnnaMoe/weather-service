@@ -15,11 +15,14 @@ export class CityService {
 
   constructor(private http: HttpClient) {}
 
+  // get cities from the server
   getCities(): Observable<City[]> {
     return this.http.get<City[]>(this.citiesUrl);
   }
 
   /** POST: add a new hero to the server */
+  // asynchronous way with Observable
+  // with <void> we return empty body
   addCity(city: City): Observable<void> {
     return this.http.post<void>(this.citiesUrl, city, this.httpOptions);
   }

@@ -355,6 +355,7 @@
     <input id="new-city" #cityName />
 
     <!-- (click) passes input value to add() and then clears the input -->
+    <!-- add-function defined in app.component -->
     <button class="add-button" (click)="add(cityName.value); cityName.value=''">
       Add City
     </button>
