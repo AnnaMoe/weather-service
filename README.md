@@ -18,9 +18,14 @@ CityService
 
 ### running local environment
 
-`gunicorn --reload backend.app`
+```
+cd backend
+gunicorn --reload backend.app
+```
 ### running with docker
 ```
+cd backend
+
 docker build -t myfalcon .
 
 docker run -it -p 8000:8000 myfalcon 
@@ -36,6 +41,7 @@ ng serve --open
 ### running with docker
  
 ```
+cd frontend
 docker build -t av-app-multistage-image .
 
 docker run -it -p 8888:80 av-app-multistage-image
