@@ -5,7 +5,7 @@ import requests
 # handling data (as a model usually does in rails)
 # --> separation from the controller
 class CityService:
-    cities = [ "Berlin", "Leipzig", "Mountain View", "Hamburg", "Lissabon", "Stockholm", "Rio de Janeiro", "Kopenhagen", "Madrid", "Rinteln" ] # will be 10 cities at the end
+    cities = [ "Berlin", "Leipzig", "Mountain View", "Hamburg", "Lissabon", "Stockholm", "Rio de Janeiro", "Kopenhagen", "Madrid", "Rinteln" ]
 
     def get_all(self):
       data = []
